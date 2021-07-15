@@ -1,0 +1,7 @@
+<form method="POST" action="/student">
+	<!-- input select textarea -->
+	<input type="number" name="grade"><br>
+	<input type="text" name="name"><br>
+	<button type="submit">가입하기</button>
+
+</form>

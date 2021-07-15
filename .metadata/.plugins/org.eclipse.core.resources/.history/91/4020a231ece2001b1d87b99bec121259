@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<th:block th:each="pageNumber : ${#numbers.sequence(1, 10)}">
+	<a th:href="@{/linkUrl(page=${pageNumber})}" th:text="${pageNumber}"></a>
+	<span class="current">Page {{ movies.number }} of {{ movies.paginator.num_pages }}</span>
+	<a th:if="pageNumber == page" pageNumber=disable></a>
+</th:block>
+</body>
+</html>

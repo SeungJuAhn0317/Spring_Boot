@@ -1,0 +1,37 @@
+<!--<table border="1">
+	<tr>
+		<td th:text="${area}"></td>
+	</tr>
+</table>-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>코로나 진료 병원 정보 출력하기</title>
+</head>
+
+<body>
+	<table border="1">
+		<tr>
+			<td>번호</td>
+			<td>시군구</td>
+			<td>기관명</td>
+			<td>진료과 수</td>
+			<td>병상 수</td>
+			<td>전화번호</td>
+			<td>주소</td>
+		</tr>
+		<tr th:each="user : ${empList}">
+			<td th:text="${emp.id}"></td>
+			<td th:text="${emp.sido}"></td>
+			<td th:text="${emp.name}"></td>
+			<td th:text="${emp.medical}"></td>
+			<td th:text="${emp.room}"></td>
+			<td th:text="${emp.tel}"></td>
+			<td th:text="${emp.address}"></td>
+		</tr>
+	</table>
+</body>
+</html>

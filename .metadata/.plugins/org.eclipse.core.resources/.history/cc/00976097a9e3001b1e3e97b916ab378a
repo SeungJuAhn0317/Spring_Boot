@@ -1,0 +1,20 @@
+package com.ggoreb.basic;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ggoreb.basic.repository.ProductRepository;
+
+@SpringBootTest
+class ProductRepositoryTest {
+	@Autowired
+	ProductRepository p;
+
+	@Test
+	void getProductList() {
+		System.out.println(111);
+		System.out.println(p.findAll()));
+	}
+
+}

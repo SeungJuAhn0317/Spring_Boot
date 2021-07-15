@@ -1,0 +1,14 @@
+package com.ggoreb.basic;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ProductRepositoryTest {
+
+	@Test
+	void getProductList() {
+		System.out.println(111);
+	}
+
+}

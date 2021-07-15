@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.ggoreb.hospital.mapper.DemoMapper&apos; to &apos;EmpMapper&apos;&#x0D;&#x0A;- Original project: &apos;hospital&apos;&#x0D;&#x0A;- Original element: &apos;com.ggoreb.hospital.mapper.DemoMapper&apos;&#x0D;&#x0A;- Renamed element: &apos;com.ggoreb.hospital.mapper.EmpMapper&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DemoMapper&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ggoreb.hospital.mapper{DemoMapper.java[DemoMapper" matchStrategy="1" name="EmpMapper" qualified="false" references="true" similarDeclarations="false" stamp="1626164365929" textual="false" version="1.0"/>
+</session>

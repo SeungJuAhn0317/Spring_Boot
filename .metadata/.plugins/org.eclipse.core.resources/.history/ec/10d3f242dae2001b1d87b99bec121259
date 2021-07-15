@@ -1,0 +1,21 @@
+package com.ggoreb.basic.controller;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+@Controller
+public class ThymeleafController {
+@GetMapping("user")
+public String user(Model model) {
+Map<String, Object> user = null;
+user = new HashMap<>();
+user.put("userId", "z");
+user.put("userName", "zoo");
+user.put("userAge", 25);
+model.addAttribute("user", user);
+return "user";
+}
+}

@@ -1,0 +1,5 @@
+package com.ggoreb.basic.model;
+
+public class User {
+
+}
