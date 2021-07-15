@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class VisitorController {
 	@GetMapping("/visitor")
-	public String visitor(@RequestHeader("user-agent") String userAgent) {
+	public String visitor(
+			@RequestHeader("user-agent") String userAgent) {
 		return userAgent;
 	}
 }

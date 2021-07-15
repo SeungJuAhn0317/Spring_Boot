@@ -1,23 +1,40 @@
 package com.ggoreb.basic.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 public class Emp {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	long empno;
+	Integer empno;
 	String ename;
 	String job;
-	int deptno;
+	Long mgr;
 	
-	@ManyToOne
-	Dept dept;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "deptno")
+	Dept dept;  // dept_deptno
+
+//	@Override
+//	public String toString() {
+//		return 
+//				"Emp [empno=" + empno + ", ename=" + ename + 
+//				", job=" + job + ", mgr=" + mgr + "]";
+//	}
+//	
+	
 }
+
+
+
+
+
+
+
+

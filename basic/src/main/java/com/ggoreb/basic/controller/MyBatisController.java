@@ -13,19 +13,32 @@ import com.ggoreb.basic.model.Demo;
 
 @RestController
 public class MyBatisController {
-   @Autowired
-   DemoMapper demoMapper;
+	@Autowired
+	DemoMapper demoMapper;
 
-   @GetMapping("/demo")
-   public List<Demo> demo() {
-      List<Demo> list = demoMapper.getDemoList();
-      return list;
-   }
-   
-   @GetMapping("/demo2")
-   public List<Map<String, Object>> demo2(
-         @RequestParam Map<String, Object > map) {
-      List<Map<String, Object>> list = demoMapper.getDemoList2(map);
-      return list;
-   }
+	@GetMapping("/demo")
+	public List<Demo> demo() {
+//		int i = new Integer(10);
+//		Integer i2 = 1000;
+//		List<Integer> l;
+//		List<int> l;
+		
+		List<Demo> list = demoMapper.getDemoList();
+		return list;
+	}
+	@GetMapping("/demo2")
+	public List<Map<String, Object>> demo2(
+			@RequestParam Map<String, Object> map) {
+		List<Map<String, Object>> list = demoMapper.getDemoList2(map);
+		return list;
+	}
 }
+
+
+
+
+
+
+
+
+

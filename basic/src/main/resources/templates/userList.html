@@ -20,9 +20,15 @@
 		</tr>
 	</table>
 	<hr>
-	<th:block th:each="pageNumber : ${#numbers.sequence(1, 10)}">
-		<span th:if="${page} == ${pageNumber}" th:text="${pageNumber}" style="font-weight:bold"></span>
- 		<span th:unless="${page} == ${pageNumber}" th:text="${pageNumber}"></span>
+	<th:block th:each="pageNumber : ${#numbers.sequence(startPage, endPage)}">	
+		<span th:if="${pageNumber} == ${page}" th:text="${pageNumber}"></span>
+		<span th:unless="${pageNumber} == ${page}" th:text="${pageNumber}" 
+			style="font-weight:bold;"></span>
 	</th:block>
 </body>
 </html>
+
+
+
+
+

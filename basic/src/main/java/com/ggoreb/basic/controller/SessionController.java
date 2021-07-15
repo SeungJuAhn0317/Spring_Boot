@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import com.ggoreb.basic.model.User;
 
 @Controller
@@ -19,7 +20,7 @@ public class SessionController {
 		session.invalidate();
 		return "redirect:/main";
 	}
-	
+
 	@GetMapping("/login")
 	public String login() {
 		return "login";

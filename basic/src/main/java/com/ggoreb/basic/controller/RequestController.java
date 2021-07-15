@@ -27,13 +27,25 @@ public class RequestController {
 	}
 
 	@GetMapping("req/param2")
-	public String param2(@RequestParam Map<String, Object> map, Model model) {
-		model.addAttribute(map);
+	public String param2(
+			@RequestParam Map<String, Object> map,
+			Model model) {
+//		model.addAttribute("map2", map);
+		model.addAttribute("id", map.get("id"));
+		model.addAttribute("xy", map.get("xy"));
+		
 		return "param2";
 	}
-
+	
+	
 	@GetMapping("/signUp")
 	public String signUp(@ModelAttribute User user) {
 		return "signUp";
 	}
 }
+
+
+
+
+
+

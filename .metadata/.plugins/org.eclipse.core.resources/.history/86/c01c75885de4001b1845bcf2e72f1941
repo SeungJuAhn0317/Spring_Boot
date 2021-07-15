@@ -1,5 +1,0 @@
-package com.ggoreb.basic.repository;
-
-public interface StudentRepository {
-
-}

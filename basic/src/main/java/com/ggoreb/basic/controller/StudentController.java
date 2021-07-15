@@ -26,3 +26,11 @@ public class StudentController {
 		return "redirect:/main";
 	}
 }
+
+
+
+
+
+
+
+

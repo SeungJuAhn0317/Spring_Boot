@@ -6,5 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.ggoreb.basic.model.Product2;
 
 @Repository
-public interface ProductRepository2 extends JpaRepository<Product2, Long> {
+public interface ProductRepository2 
+	extends JpaRepository<Product2, Long> {
+	
+	
 }

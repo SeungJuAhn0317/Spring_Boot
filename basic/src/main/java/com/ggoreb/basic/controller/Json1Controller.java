@@ -27,6 +27,7 @@ public class Json1Controller {
 		Member member = new Member();
 		member.setName("kim");
 		map2.put("key4", member);
+		
 		return map2;
 	}
 

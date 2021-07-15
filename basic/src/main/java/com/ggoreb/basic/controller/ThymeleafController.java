@@ -24,10 +24,10 @@ public class ThymeleafController {
 	}
 
 	@GetMapping("userList")
-	public String userList(Model model, @RequestParam(defaultValue = "1") int page) {
-		model.addAttribute("page", page);
+	public String userList(Model model, @RequestParam("page") int page) {
+		model.addAttribute("page", page); // 5 13 10
 
-		int startPage = (page - 1) / 10 * 10 + 1;
+		int startPage = (page - 1) / 10 * 10 + 1; // 1 11
 		int endPage = startPage + 9;
 		model.addAttribute("startPage", startPage);
 		model.addAttribute("endPage", endPage);
@@ -39,35 +39,23 @@ public class ThymeleafController {
 		user.put("userName", "apple");
 		user.put("userAge", 21);
 		userList.add(user);
-
 		user = new HashMap<>();
 		user.put("userId", "b");
 		user.put("userName", "banana");
 		user.put("userAge", 22);
 		userList.add(user);
-
 		user = new HashMap<>();
 		user.put("userId", "c");
 		user.put("userName", "carrot");
 		user.put("userAge", 23);
 		userList.add(user);
-
 		model.addAttribute("userList", userList);
 		return "userList";
 	}
 
-	@GetMapping("pagination")
-	public String pagination(Model model, @RequestParam("page") int page) {
-		int startPage = (page - 1) / 10 * 10 + 1;
-		int endPage = startPage + 9;
-		model.addAttribute("startPage", startPage);
-		model.addAttribute("endPage", endPage);
-		model.addAttribute("page", page);
-		return "pagination";
-	}
-
 	@GetMapping("linkUrl")
-	public String linkUrl(Model model, @RequestParam(defaultValue = "1") int page) {
+	public String linkUrl(
+			Model model, @RequestParam(defaultValue = "1") int page) {
 		int startPage = (page - 1) / 10 * 10 + 1;
 		int endPage = startPage + 9;
 		model.addAttribute("startPage", startPage);
@@ -75,5 +63,4 @@ public class ThymeleafController {
 		model.addAttribute("page", page);
 		return "linkUrl";
 	}
-
 }

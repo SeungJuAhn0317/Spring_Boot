@@ -14,5 +14,7 @@ public class Team {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	long id;
 	String name;
-	
 }
+
+
+

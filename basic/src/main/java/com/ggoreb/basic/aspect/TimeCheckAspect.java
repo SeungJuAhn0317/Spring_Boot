@@ -14,13 +14,12 @@ import lombok.extern.slf4j.Slf4j;
 public class TimeCheckAspect {
 	long start, end;
 	
-	
-	@Before(value = "execution (* com.ggoreb.basic.controller.ThymeleafController.userList(..))")
+	@Before(value = "execution (* com.ggoreb.basic.controller.Thyme*.userList(..))")
 	public void onBeforeHandler(JoinPoint joinPoint) {
 		start = System.currentTimeMillis();
 	}
 
-	@After(value = "execution (* com.ggoreb.basic.controller.ThymeleafController.userList(..))")
+	@After(value = "execution (* com.ggoreb.basic.controller.Thyme*.userList(..))")
 	public void onAfterHandler(JoinPoint joinPoint) {
 		end = System.currentTimeMillis();
 		System.out.printf("%s msec", end - start);

@@ -16,10 +16,10 @@ import com.ggoreb.basic.repository.ProductRepository2;
 public class JpaController {
 	@Autowired
 	ProductRepository productRepository;
-	
+
 	@Autowired
 	ProductRepository2 productRepository2;
-
+	
 	@GetMapping("/jpa/product")
 	public List<Product> product() {
 		List<Product> list = productRepository.findAll();
@@ -28,8 +28,21 @@ public class JpaController {
 	}
 
 	@PostMapping("/jpa/product")
-	public String productPost(@ModelAttribute Product product) {
+	public String productPost(
+			@ModelAttribute 
+			Product product) {
 		productRepository.save(product);
 		return "redirect:/jpa/product";
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

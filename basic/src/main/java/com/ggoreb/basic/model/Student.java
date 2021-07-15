@@ -7,12 +7,12 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
-@Data
 @Entity
+@Data
 public class Student {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
-	private int grade;
+	private Long grade;
 }

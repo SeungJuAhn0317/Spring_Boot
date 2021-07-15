@@ -1,6 +1,7 @@
 package com.ggoreb.basic.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,7 +17,13 @@ public class Player {
 	long id;
 	String name;
 	int age;
-	
 	@ManyToOne
 	Team team;
 }
+
+
+
+
+
+
+

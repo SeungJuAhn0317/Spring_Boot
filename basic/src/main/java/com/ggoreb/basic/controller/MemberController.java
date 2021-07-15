@@ -18,11 +18,18 @@ public class MemberController {
 	public String member() {
 		return "member";
 	}
-	
+
 	@PostMapping("/member")
 	public String memberPost(@ModelAttribute Member member) {
-		// 관련 데이터를 DB에 저장 또는 수정 또는 삭제
 		memberRepository.save(member);
 		return "redirect:/main";
 	}
 }
+
+
+
+
+
+
+
+

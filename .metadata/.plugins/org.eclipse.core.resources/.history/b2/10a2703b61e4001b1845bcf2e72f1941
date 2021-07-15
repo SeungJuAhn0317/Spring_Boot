@@ -1,6 +1,0 @@
-package com.ggoreb.basic.repository;
-
-public class Snippet {
-		private String userPassword;
-}
-

@@ -1,6 +1,0 @@
-package com.ggoreb.basic.model;
-
-public class User {
-	private String userId;
-	private String userPw;
-}
